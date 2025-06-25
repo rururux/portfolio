@@ -1,4 +1,6 @@
 ---
+import Image from "astro/components/Image.astro"
+
 type Project = {
   name: string,
   skills: string[],
@@ -67,52 +69,50 @@ const projects: Project[] = [
 ]
 ---
 
-<main class="min-h-full py-20 grid place-items-center">
-  <article class="w-lg p-4 border border-zinc-300 rounded-lg grid gap-y-4 shadow-lg dark:bg-zinc-800 dark:border-zinc-600">
-    <header class="grid grid-cols-[80px_minmax(0,_1fr)] grid-rows-1 gap-x-4 items-center">
-      <img class="aspect-square w-32 rounded-full row-span-2" src="profile.jpg" alt="" width="100" height="100">
-      <div>
-        <h2 class="text-3xl font-bold">うえき</h2>
-        <span class="text-zinc-800 dark:text-white/70">(Rafael ヤスヒデ 須藤)</span>
-      </div>
-    </header>
-    <div class="flex flex-wrap gap-x-1 gap-y-2 text-sm text-zinc-800 dark:text-white/70">
-      {skills.map(skill => (
-        <span class="px-1.5 border border-zinc-500 rounded-sm">{skill}</span>
-      ))}
+<article class="w-lg p-4 border border-zinc-300 rounded-lg grid gap-y-4 shadow-lg dark:bg-zinc-800 dark:border-zinc-600">
+  <header class="grid grid-cols-[80px_minmax(0,_1fr)] grid-rows-1 gap-x-4 items-center">
+    <Image class="aspect-square w-32 rounded-full row-span-2" src="/profile.jpg" alt="" width="100" height="100" />
+    <div>
+      <h2 class="text-3xl font-bold">うえき</h2>
+      <span class="text-zinc-800 dark:text-white/70">(Rafael ヤスヒデ 須藤)</span>
     </div>
-    <main>
-      <span>プログラミングと、音楽と、デザインと、モノが好き。</span>
-      <details class="mt-4 border border-zinc-300 rounded-md dark:border-zinc-600">
-        <summary class="px-2 py-2">作ったもの</summary>
-        <ul class="mx-4 mt-2 mb-4 flex flex-col gap-y-4">
-          {projects.map(({ name, skills, description, links }) => (
-            <li>
-              <article class="px-4 py-2 border border-zinc-300 rounded-md flex flex-col gap-y-2 dark:border-zinc-600">
-                <header>
-                  <h3 class="text-2xl">{name}</h3>
-                  <div class="mt-2 flex flex-wrap gap-x-1 gap-y-2 text-sm text-zinc-800 dark:text-white/70">
-                    {skills.map(skill => (
-                      <span class="px-1.5 border border-zinc-500 rounded-sm">{skill}</span>
-                    ))}
-                  </div>
-                </header>
-                <main>{description}</main>
-                <footer class="flex flex-col gap-y-1">
-                  {links.map(link => (
-                    <a class="w-fit flex items-center gap-x-1 text-blue-700 hover:underline dark:text-blue-300" href={link.href} target="_blank">
-                      <svg class="text-black dark:text-white" width="24" height="24" viewBox="0 0 24 24" aria-label={link.type}>
-                        <use href={`/icons.svg#${link.type}`} />
-                      </svg>
-                      <span>{link.href}</span>
-                    </a>
+  </header>
+  <div class="flex flex-wrap gap-x-1 gap-y-2 text-sm text-zinc-800 dark:text-white/70">
+    {skills.map(skill => (
+      <span class="px-1.5 border border-zinc-500 rounded-sm">{skill}</span>
+    ))}
+  </div>
+  <main>
+    <span>プログラミングと、音楽と、デザインと、モノが好き。</span>
+    <details class="mt-4 border border-zinc-300 rounded-md dark:border-zinc-600">
+      <summary class="px-2 py-2">作ったもの</summary>
+      <ul class="mx-4 mt-2 mb-4 flex flex-col gap-y-4">
+        {projects.map(({ name, skills, description, links }) => (
+          <li>
+            <article class="px-4 py-2 border border-zinc-300 rounded-md flex flex-col gap-y-2 dark:border-zinc-600">
+              <header>
+                <h3 class="text-2xl">{name}</h3>
+                <div class="mt-2 flex flex-wrap gap-x-1 gap-y-2 text-sm text-zinc-800 dark:text-white/70">
+                  {skills.map(skill => (
+                    <span class="px-1.5 border border-zinc-500 rounded-sm">{skill}</span>
                   ))}
-                </footer>
-              </article>
-            </li>
-          ))}
-        </ul>
-      </details>
-    </main>
-  </article>
-</main>
+                </div>
+              </header>
+              <main>{description}</main>
+              <footer class="flex flex-col gap-y-1">
+                {links.map(link => (
+                  <a class="w-fit flex items-center gap-x-1 text-blue-700 hover:underline dark:text-blue-300" href={link.href} target="_blank">
+                    <svg class="text-black dark:text-white" width="24" height="24" viewBox="0 0 24 24" aria-label={link.type}>
+                      <use href={`/icons.svg#${link.type}`} />
+                    </svg>
+                    <span>{link.href}</span>
+                  </a>
+                ))}
+              </footer>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </details>
+  </main>
+</article>
