@@ -4,7 +4,7 @@ type Project = {
   skills: string[],
   description: string,
   links: {
-    icon: string,
+    type: string,
     href: string
   }[]
 }
@@ -22,11 +22,11 @@ const projects: Project[] = [
     description: "Web Stream API を使ってストリームから ZIP 圧縮を行う為のライブラリ。",
     links: [
       {
-        icon: "npm",
+        type: "npm",
         href: "https://www.npmjs.com/package/web-stream-zip"
       },
       {
-        icon: "github",
+        type: "github",
         href: "https://github.com/rururux/web-stream-zip"
       }
     ]
@@ -37,7 +37,7 @@ const projects: Project[] = [
     description: "JS 用ライブラリの turbo-stream でエンコードされたデータをデコードできる Kotlin 用デコーダライブラリ。",
     links: [
       {
-        icon: "github",
+        type: "github",
         href: "https://github.com/rururux/turbo-stream-kt"
       }
     ]
@@ -48,7 +48,7 @@ const projects: Project[] = [
     description: "C++ の Google Test と Kotlin の kotlin-test をベースとした、Zig のテスト用ユーティリティライブラリ。",
     links: [
       {
-        icon: "github",
+        type: "github",
         href: "https://github.com/rururux/zest"
       }
     ]
@@ -59,7 +59,7 @@ const projects: Project[] = [
     description: "入力されたテキストに含まれる単語や一節から、一番響きが似ている国名を見つけ出すネタアプリ。2022年に制作。",
     links: [
       {
-        icon: "link",
+        type: "link",
         href: "https://gorgeous-phi.vercel.app/"
       }
     ]
@@ -101,8 +101,8 @@ const projects: Project[] = [
                 <footer class="flex flex-col gap-y-1">
                   {links.map(link => (
                     <a class="w-fit flex items-center gap-x-1 text-blue-700 hover:underline dark:text-blue-300" href={link.href} target="_blank">
-                      <svg class="text-black dark:text-white" width="24" height="24" viewBox="0 0 24 24">
-                        <use href={`/icons.svg#${link.icon}`} />
+                      <svg class="text-black dark:text-white" width="24" height="24" viewBox="0 0 24 24" aria-label={link.type}>
+                        <use href={`/icons.svg#${link.type}`} />
                       </svg>
                       <span>{link.href}</span>
                     </a>
