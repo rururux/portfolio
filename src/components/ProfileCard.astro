@@ -71,7 +71,7 @@ const projects: Project[] = [
 
 <article class="w-lg p-4 border border-zinc-300 rounded-lg grid gap-y-4 shadow-lg dark:bg-zinc-800 dark:border-zinc-600">
   <header class="grid grid-cols-[80px_minmax(0,_1fr)] grid-rows-1 gap-x-4 items-center">
-    <Image class="aspect-square w-32 rounded-full row-span-2" src="/profile.jpg" alt="" width="100" height="100" />
+    <Image class="aspect-square w-32 rounded-full row-span-2" src={`${import.meta.env.BASE_URL}/profile.jpg`} alt="" width="100" height="100" />
     <div>
       <h2 class="text-3xl font-bold">うえき</h2>
       <span class="text-zinc-800 dark:text-white/70">(Rafael ヤスヒデ 須藤)</span>
@@ -103,7 +103,7 @@ const projects: Project[] = [
                 {links.map(link => (
                   <a class="w-fit flex items-center gap-x-1 text-blue-700 hover:underline dark:text-blue-300" href={link.href} target="_blank">
                     <svg class="text-black dark:text-white" width="24" height="24" viewBox="0 0 24 24" aria-label={link.type}>
-                      <use href={`/icons.svg#${link.type}`} />
+                      <use href={`${import.meta.env.BASE_URL}/icons.svg#${link.type}`} />
                     </svg>
                     <span>{link.href}</span>
                   </a>
