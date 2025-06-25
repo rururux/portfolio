@@ -1,0 +1,27 @@
+---
+const skills = [
+  "HTML / CSS", "JavaScript", "TypeScript", "React", "Svelte", "Node.js",
+  "Kotlin", "Jetpack Compose",
+  "Zig"
+]
+---
+
+<main class="h-full grid place-items-center">
+  <article class="w-lg p-4 border border-zinc-300 rounded-lg grid gap-y-4 shadow-lg">
+    <header class="grid grid-cols-[80px_minmax(0,_1fr)] grid-rows-1 gap-x-4 items-center">
+      <img class="aspect-square w-32 rounded-full row-span-2" src="profile.jpg" alt="" width="100" height="100">
+      <div>
+        <h2 class="text-3xl font-bold">うえき</h2>
+        <span class="text-zinc-800">(Rafael ヤスヒデ 須藤)</span>
+      </div>
+    </header>
+    <div class="flex flex-wrap gap-x-1 gap-y-2 text-sm text-zinc-800">
+      {skills.map(skill => (
+        <span class="px-1.5 border border-zinc-500 rounded-sm">{skill}</span>
+      ))}
+    </div>
+    <main>
+      <span>プログラミングと、音楽と、デザインと、モノが好き。</span>
+    </main>
+  </article>
+</main>
