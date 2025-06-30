@@ -69,7 +69,7 @@ const projects: Project[] = [
 ]
 ---
 
-<article class="w-lg p-4 border border-zinc-300 rounded-lg grid gap-y-4 shadow-lg dark:bg-zinc-800 dark:border-zinc-600">
+<article class="p-4 border border-zinc-300 rounded-lg flex flex-col gap-y-4 shadow-lg dark:bg-zinc-800 dark:border-zinc-600">
   <header class="grid grid-cols-[80px_minmax(0,_1fr)] grid-rows-1 gap-x-4 items-center">
     <Image class="aspect-square w-32 rounded-full row-span-2" src={`${import.meta.env.BASE_URL}/profile.jpg`} alt="" width="100" height="100" />
     <div>
@@ -86,7 +86,7 @@ const projects: Project[] = [
     <span>プログラミングと、音楽と、デザインと、モノが好き。</span>
     <details class="mt-4 border border-zinc-300 rounded-md dark:border-zinc-600">
       <summary class="px-2 py-2">作ったもの</summary>
-      <ul class="mx-4 mt-2 mb-4 flex flex-col gap-y-4">
+      <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
         {projects.map(({ name, skills, description, links }) => (
           <li>
             <article class="px-4 py-2 border border-zinc-300 rounded-md flex flex-col gap-y-2 dark:border-zinc-600">
