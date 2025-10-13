@@ -1,0 +1,50 @@
+[
+  {
+    "name": "web-stream-zip",
+    "skills": [ "JavaScript", "TypeScript", "Node.js" ],
+    "description": "Web Stream API を使ってストリームから ZIP 圧縮を行う為のライブラリ。",
+    "links": [
+      {
+        "type": "npm",
+        "href": "https://www.npmjs.com/package/web-stream-zip"
+      },
+      {
+        "type": "github",
+        "href": "https://github.com/rururux/web-stream-zip"
+      }
+    ]
+  },
+  {
+    "name": "turbo-stream-kt",
+    "skills": [ "TypeScript", "Kotlin" ],
+    "description": "JS 用ライブラリの turbo-stream でエンコードされたデータをデコードできる Kotlin 用デコーダライブラリ。",
+    "links": [
+      {
+        "type": "github",
+        "href": "https://github.com/rururux/turbo-stream-kt"
+      }
+    ]
+  },
+  {
+    "name": "Zest",
+    "skills": [ "Zig" ],
+    "description": "C++ の Google Test と Kotlin の kotlin-test をベースとした、Zig のテスト用ユーティリティライブラリ。",
+    "links": [
+      {
+        "type": "github",
+        "href": "https://github.com/rururux/zest"
+      }
+    ]
+  },
+  {
+    "name": "ゴージャス☆ジェネレーター",
+    "skills": [ "HTML / CSS", "JavaScript", "TypeScript", "Node.js" ],
+    "description": "入力されたテキストに含まれる単語や一節から、一番響きが似ている国名を見つけ出すネタアプリ。2022年に制作。",
+    "links": [
+      {
+        "type": "link",
+        "href": "https://gorgeous-phi.vercel.app/"
+      }
+    ]
+  }
+]
