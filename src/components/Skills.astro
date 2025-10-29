@@ -1,0 +1,9 @@
+---
+type Props = { class?: string }
+
+const { class: clazz = "" } = Astro.props
+---
+
+<div class={[ "flex flex-wrap gap-x-1 gap-y-2 text-sm text-zinc-800 dark:text-white/70", clazz ].join(" ")}>
+  <slot />
+</div>
