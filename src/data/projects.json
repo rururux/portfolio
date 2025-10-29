@@ -37,6 +37,25 @@
     ]
   },
   {
+    "name": "Offline Score Board",
+    "skills": [ "HTML / CSS", "JavaScript" ],
+    "description": "初代 iPad の Safari 3 でオフライン動作するスコアボード Web アプリ。2024年に制作。作った理由や詳細は Zenn の記事にあります。",
+    "links": [
+      {
+        "type": "link",
+        "href": "https://score-board.pages.dev/"
+      },
+      {
+        "type": "github",
+        "href": "https://github.com/rururux/score-board"
+      },
+      {
+        "type": "article",
+        "href": "https://zenn.dev/kei874/articles/23ca6e9f1e4dce"
+      }
+    ]
+  },
+  {
     "name": "ゴージャス☆ジェネレーター",
     "skills": [ "HTML / CSS", "JavaScript", "TypeScript", "Node.js" ],
     "description": "入力されたテキストに含まれる単語や一節から、一番響きが似ている国名を見つけ出すネタアプリ。2022年に制作。",
