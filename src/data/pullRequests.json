@@ -1,5 +1,12 @@
 [
   {
+    "project": "React Router",
+    "name": "Run action handlers for routes with middleware even if no loader is present #14443",
+    "link": "https://github.com/remix-run/react-router/pull/14443",
+    "skills": [ "JavaScript", "TypeScript", "Node.js", "React" ],
+    "description": "特定の環境(middleware が設定されているが `loader()` 関数が設定されていないページ)で `action()` 関数が正しく実行されない問題の修正"
+  },
+  {
     "project": "Ktor",
     "name": "Add fallback when the redirect response has no Location header #5050",
     "link": "https://github.com/ktorio/ktor/pull/5050",
