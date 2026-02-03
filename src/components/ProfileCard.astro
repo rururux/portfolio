@@ -2,11 +2,6 @@
 import Image from "astro/components/Image.astro"
 import Skills from "./Skills.astro"
 import Skill from "./Skill.astro"
-import ProjectInfo from "./ProjectInfo.astro"
-import PullRequestInfo from "./PullRequestInfo.astro"
-import projects from "../data/projects.json"
-import pullRequests from "../data/pullRequests.json"
-import Accordion from "./Accordion.astro"
 
 const skills = [
   "HTML / CSS", "JavaScript", "TypeScript", "React", "Svelte", "Node.js",
@@ -28,23 +23,6 @@ const skills = [
   </Skills>
   <main>
     <span>プログラミングと、音楽と、デザインと、モノが好き。</span>
-    <Accordion summary="作ったもの">
-      <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
-        {projects.map(projectInfo => (
-          <li>
-            <ProjectInfo projectInfo={projectInfo} />
-          </li>
-        ))}
-      </ul>
-    </Accordion>
-    <Accordion summary="これまで作成したプルリクエスト">
-      <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
-        {pullRequests.map(prInfo => (
-          <li>
-            <PullRequestInfo prInfo={prInfo} />
-          </li>
-        ))}
-      </ul>
-    </Accordion>
+    <slot />
   </main>
 </article>

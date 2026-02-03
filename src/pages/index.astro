@@ -1,10 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import ProfileCard from "../components/ProfileCard.astro"
+import Accordion from "../components/Accordion.astro"
+import ProjectInfo from "../components/ProjectInfo.astro"
+import PullRequestInfo from "../components/PullRequestInfo.astro"
+import projects from "../data/projects.json"
+import pullRequests from "../data/pullRequests.json"
 ---
 
 <Layout title="Profile">
   <main class="min-h-full px-4 py-20 grid grid-cols-[minmax(0,_512px)] place-content-center">
-    <ProfileCard />
+    <ProfileCard>
+      <Accordion summary="作ったもの">
+        <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
+          {projects.map(projectInfo => (
+            <li>
+              <ProjectInfo projectInfo={projectInfo} />
+            </li>
+          ))}
+        </ul>
+      </Accordion>
+      <Accordion summary="これまで作成したプルリクエスト">
+        <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
+          {pullRequests.map(prInfo => (
+            <li>
+              <PullRequestInfo prInfo={prInfo} />
+            </li>
+          ))}
+        </ul>
+      </Accordion>
+    </ProfileCard>
   </main>
 </Layout>
