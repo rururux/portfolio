@@ -2,6 +2,7 @@
   {
     "project": "Astro",
     "name": "fix: fix image 500 error when moving dist directory in standalone Node #15169",
+    "date": "2026-01-13",
     "link": "https://github.com/withastro/astro/pull/15169",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "Astro でプロジェクトをビルドした際、生成されるコードが現在のフォルダツリーに依存してしまっており dist フォルダを移動させることができないという問題の修正"
@@ -9,6 +10,7 @@
   {
     "project": "Astro",
     "name": "fix: Accept setCookie from both context and headers #15152",
+    "date": "2026-01-09",
     "link": "https://github.com/withastro/astro/pull/15152",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "開発環境において、レスポンスヘッダに2つの方法でそれぞれ Cookie を設定した際に片方の方法で追加したものが上書きされてしまう問題の修正"
@@ -16,6 +18,7 @@
   {
     "project": "React Router",
     "name": "Run action handlers for routes with middleware even if no loader is present #14443",
+    "date": "2025-10-24",
     "link": "https://github.com/remix-run/react-router/pull/14443",
     "skills": [ "JavaScript", "TypeScript", "Node.js", "React" ],
     "description": "特定の環境(middleware が設定されているが `loader()` 関数が設定されていないページ)で `action()` 関数が正しく実行されない問題の修正"
@@ -23,6 +26,7 @@
   {
     "project": "Ktor",
     "name": "Add fallback when the redirect response has no Location header #5050",
+    "date": "2025-09-18",
     "link": "https://github.com/ktorio/ktor/pull/5050",
     "skills": [ "Ktor" ],
     "description": "リダイレクトレスポンスに Location ヘッダが含まれていなかった時の挙動の修正"
@@ -30,6 +34,7 @@
   {
     "project": "React Hook Form",
     "name": "Handle explicit \"multipart/form-data\" encType in Form Component #12948",
+    "date": "2025-07-13",
     "link": "https://github.com/react-hook-form/react-hook-form/pull/12948",
     "skills": [ "JavaScript", "TypeScript", "Node.js", "React" ],
     "description": "React Hook Form の <Form> コンポーネントにおいて、明示的に `encType=\"multipart/form-data\"` と設定された時に起きる問題の修正"
@@ -37,6 +42,7 @@
   {
     "project": "React Router",
     "name": "Remove Content-Length header from Single Fetch responses #13902",
+    "date": "2025-07-01",
     "link": "https://github.com/remix-run/react-router/pull/13902",
     "skills": [ "JavaScript", "TypeScript", "Node.js", "React" ],
     "description": "主に認証ライブラリ等で作成されるリダイレクトレスポンスに含まれる Content-Length ヘッダと React Router の Single Fetch 機能の相性問題によって起きる問題の修正"
@@ -44,6 +50,7 @@
   {
     "project": "React Router",
     "name": "Support invalid Date in turbo-stream v2 fork #13684",
+    "date": "2025-06-26",
     "link": "https://github.com/remix-run/react-router/pull/13684",
     "skills": [ "JavaScript", "TypeScript", "Node.js" ],
     "description": "React Router の内部で使われている turbo-stream のフォークコードで、invalid Date を扱うことが出来なかった問題の修正"
@@ -51,6 +58,7 @@
   {
     "project": "React Router",
     "name": "Support unencoded UTF-8 routes in prerender config with ssr set to false #13699",
+    "date": "2025-06-28",
     "link": "https://github.com/remix-run/react-router/pull/13699",
     "skills": [ "JavaScript", "TypeScript", "Node.js" ],
     "description": "`ssr: false` の時、非 ASCII 文字が含まれるルートページの prerender に失敗する問題の修正"
@@ -58,6 +66,7 @@
   {
     "project": "Ktor",
     "name": "Add remove and removeAll methods to CacheStorage #4896",
+    "date": "2025-06-04",
     "link": "https://github.com/ktorio/ktor/pull/4896",
     "skills": [ "Ktor" ],
     "description": "Ktor の CacheStorage に削除機能を追加してほしいという要望を受けて実装"
@@ -65,6 +74,7 @@
   {
     "project": "Ktor",
     "name": "Store client header cookies with RAW encoding to prevent value alteration #4873",
+    "date": "2025-05-27",
     "link": "https://github.com/ktorio/ktor/pull/4873",
     "skills": [ "Ktor" ],
     "description": "Ktor でレスポンスを受け取った際、Cookie の値が自動でエンコードされて保存されてしまう問題の修正"

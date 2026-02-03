@@ -57,7 +57,7 @@ const skills = [
     <details class="mt-4 border border-zinc-300 rounded-md dark:border-zinc-600">
       <summary class="px-2 py-2">これまで作成したプルリクエスト</summary>
       <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
-        {pullRequests.map(({ project, name, link, skills, description }) => (
+        {pullRequests.map(({ project, name, date, link, skills, description }) => (
           <li>
             <article class="px-4 py-2 border border-zinc-300 rounded-md flex flex-col gap-y-2 dark:border-zinc-600">
               <header>
@@ -68,6 +68,12 @@ const skills = [
                     </svg>{name}
                   </Link>
                 </h3>
+                <div class="flex items-center gap-1">
+                  <svg width="20" height="20" viewBox="0 0 24 24">
+                    <use href={`${import.meta.env.BASE_URL}/icons.svg#calendar`} />
+                  </svg>
+                  <time datetime={date}>{date.replaceAll("-", "/")}</time>
+                </div>
                 <Skills class="mt-2">
                   {skills.map(skill => <Skill>{skill}</Skill>)}
                 </Skills>
