@@ -6,6 +6,7 @@ import ProjectInfo from "./ProjectInfo.astro"
 import PullRequestInfo from "./PullRequestInfo.astro"
 import projects from "../data/projects.json"
 import pullRequests from "../data/pullRequests.json"
+import Accordion from "./Accordion.astro"
 
 const skills = [
   "HTML / CSS", "JavaScript", "TypeScript", "React", "Svelte", "Node.js",
@@ -27,8 +28,7 @@ const skills = [
   </Skills>
   <main>
     <span>プログラミングと、音楽と、デザインと、モノが好き。</span>
-    <details class="mt-4 border border-zinc-300 rounded-md dark:border-zinc-600">
-      <summary class="px-2 py-2">作ったもの</summary>
+    <Accordion summary="作ったもの">
       <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
         {projects.map(projectInfo => (
           <li>
@@ -36,9 +36,8 @@ const skills = [
           </li>
         ))}
       </ul>
-    </details>
-    <details class="mt-4 border border-zinc-300 rounded-md dark:border-zinc-600">
-      <summary class="px-2 py-2">これまで作成したプルリクエスト</summary>
+    </Accordion>
+    <Accordion summary="これまで作成したプルリクエスト">
       <ul class="px-4 pt-2 pb-4 flex flex-col gap-y-4">
         {pullRequests.map(prInfo => (
           <li>
@@ -46,6 +45,6 @@ const skills = [
           </li>
         ))}
       </ul>
-    </details>
+    </Accordion>
   </main>
 </article>
