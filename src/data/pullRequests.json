@@ -1,5 +1,19 @@
 [
   {
+    "project": "Astro",
+    "name": "fix: fix image 500 error when moving dist directory in standalone Node #15169",
+    "link": "https://github.com/withastro/astro/pull/15169",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "Astro でプロジェクトをビルドした際、生成されるコードが現在のフォルダツリーに依存してしまっており dist フォルダを移動させることができないという問題の修正"
+  },
+  {
+    "project": "Astro",
+    "name": "fix: Accept setCookie from both context and headers #15152",
+    "link": "https://github.com/withastro/astro/pull/15152",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "開発環境において、レスポンスヘッダに2つの方法でそれぞれ Cookie を設定した際に片方の方法で追加したものが上書きされてしまう問題の修正"
+  },
+  {
     "project": "React Router",
     "name": "Run action handlers for routes with middleware even if no loader is present #14443",
     "link": "https://github.com/remix-run/react-router/pull/14443",
