@@ -1,0 +1,31 @@
+---
+import Link from "./Link.astro"
+import Skill from "./Skill.astro"
+import Skills from "./Skills.astro"
+
+type Props = {
+  projectInfo: (typeof import("../data/projects.json"))[number]
+}
+
+const { name, skills, description, links } = Astro.props.projectInfo
+---
+
+<article class="px-4 py-2 border border-zinc-300 rounded-md flex flex-col gap-y-2 dark:border-zinc-600">
+  <header>
+    <h3 class="text-2xl">{name}</h3>
+    <Skills class="mt-2">
+      {skills.map(skill => <Skill>{skill}</Skill>)}
+    </Skills>
+  </header>
+  <main>{description}</main>
+  <footer class="flex flex-col gap-y-1">
+    {links.map(link => (
+      <Link class="w-fit flex items-center gap-x-1" href={link.href} target="_blank">
+        <svg class="text-black dark:text-white" width="24" height="24" viewBox="0 0 24 24" aria-label={link.type}>
+          <use href={`${import.meta.env.BASE_URL}/icons.svg#${link.type}`} />
+        </svg>
+        <span>{link.href}</span>
+      </Link>
+    ))}
+  </footer>
+</article>
