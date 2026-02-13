@@ -1,5 +1,37 @@
 [
   {
+    "project": "eslint/csstree",
+    "name": "fix: add support for alpha() color function #107",
+    "date": "2026-02-07",
+    "link": "https://github.com/eslint/csstree/pull/107",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "現在定義されている CSS Color functions の中で未サポートとなっていた `alpha()` 関数のサポートを追加"
+  },
+  {
+    "project": "Astro",
+    "name": "feat: add getRemoteSize() to ImageService to enable customization of inferRemoteSize behavior #15231",
+    "date": "2026-02-06",
+    "link": "https://github.com/withastro/astro/pull/15231",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "`inferRemoteSize()` という関数が使用された時、結果がキャッシュされずに毎回 fetch されてしまい通信量増加などの問題がある為任意で動作をカスタマイズできる機能を追加"
+  },
+  {
+    "project": "Astro",
+    "name": "fix: Avoid creating unused images during build in Picture component #15268",
+    "date": "2026-02-05",
+    "link": "https://github.com/withastro/astro/pull/15268",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "`<Image />` コンポーネント等を使用した際、ビルド時に自動で画像ファイルが生成されるが、不要なファイルも生成されていた問題の修正"
+  },
+  {
+    "project": "Astro",
+    "name": " fix: remove is:raw from rehype-prism plugin #15297",
+    "date": "2026-02-04",
+    "link": "https://github.com/withastro/astro/pull/15297",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "シンタックスハイライトとして Prism を使用した際、`is:raw` という属性がビルド後のファイルに残ってしまう問題の調査・修正"
+  },
+  {
     "project": "Astro",
     "name": "fix: fix image 500 error when moving dist directory in standalone Node #15169",
     "date": "2026-01-13",
