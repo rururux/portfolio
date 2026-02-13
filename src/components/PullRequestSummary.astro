@@ -1,0 +1,53 @@
+---
+import Link from "./Link.astro";
+
+type Props = {
+  pullRequests: typeof import("../data/pullRequests.json");
+};
+
+const { pullRequests } = Astro.props;
+const prEntries = Array.from(
+  pullRequests
+    .reduce((map, cur) => {
+      const key = cur.project;
+      const projectLink = cur.projectLink;
+      const count = (map.get(key)?.count ?? 0) + 1;
+
+      map.set(key, { projectLink, count });
+
+      return map;
+    }, new Map<string, { count: number; projectLink: string }>())
+    .entries(),
+);
+---
+
+<article class="px-4 py-2">
+  <table class="border border-zinc-600 dark:border-zinc-400 max-w-80 mx-auto">
+    <caption>これまで貢献したプロジェクト</caption>
+    <thead>
+      <tr>
+        <th class="border border-zinc-600 dark:border-zinc-400 px-4" scope="col">
+          プロジェクト名
+        </th>
+        <th class="border border-zinc-600 dark:border-zinc-400 px-4" scope="col">
+          マージ済みプルリクエストの数
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {prEntries.map(([projectName, { count, projectLink }]) => (
+        <tr>
+          <th
+            class="border border-zinc-600 dark:border-zinc-400 px-4"
+            scope="row"
+          >
+            <Link href={projectLink} target="_blank">{projectName}</Link>
+          </th>
+          <td class="text-center border border-zinc-600 dark:border-zinc-400 px-4">
+            {count}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</article>
