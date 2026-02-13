@@ -4,6 +4,7 @@
     "name": "fix: add support for alpha() color function #107",
     "date": "2026-02-07",
     "link": "https://github.com/eslint/csstree/pull/107",
+    "projectLink": "https://github.com/eslint/csstree",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "現在定義されている CSS Color functions の中で未サポートとなっていた `alpha()` 関数のサポートを追加"
   },
@@ -12,6 +13,7 @@
     "name": "feat: add getRemoteSize() to ImageService to enable customization of inferRemoteSize behavior #15231",
     "date": "2026-02-06",
     "link": "https://github.com/withastro/astro/pull/15231",
+    "projectLink": "https://github.com/withastro/astro",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "`inferRemoteSize()` という関数が使用された時、結果がキャッシュされずに毎回 fetch されてしまい通信量増加などの問題がある為任意で動作をカスタマイズできる機能を追加"
   },
@@ -20,6 +22,7 @@
     "name": "fix: Avoid creating unused images during build in Picture component #15268",
     "date": "2026-02-05",
     "link": "https://github.com/withastro/astro/pull/15268",
+    "projectLink": "https://github.com/withastro/astro",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "`<Image />` コンポーネント等を使用した際、ビルド時に自動で画像ファイルが生成されるが、不要なファイルも生成されていた問題の修正"
   },
@@ -28,6 +31,7 @@
     "name": " fix: remove is:raw from rehype-prism plugin #15297",
     "date": "2026-02-04",
     "link": "https://github.com/withastro/astro/pull/15297",
+    "projectLink": "https://github.com/withastro/astro",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "シンタックスハイライトとして Prism を使用した際、`is:raw` という属性がビルド後のファイルに残ってしまう問題の調査・修正"
   },
@@ -36,6 +40,7 @@
     "name": "fix: fix image 500 error when moving dist directory in standalone Node #15169",
     "date": "2026-01-13",
     "link": "https://github.com/withastro/astro/pull/15169",
+    "projectLink": "https://github.com/withastro/astro",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "Astro でプロジェクトをビルドした際、生成されるコードが現在のフォルダツリーに依存してしまっており dist フォルダを移動させることができないという問題の修正"
   },
@@ -44,6 +49,7 @@
     "name": "fix: Accept setCookie from both context and headers #15152",
     "date": "2026-01-09",
     "link": "https://github.com/withastro/astro/pull/15152",
+    "projectLink": "https://github.com/withastro/astro",
     "skills": [ "JavaScript", "TypeScript" ],
     "description": "開発環境において、レスポンスヘッダに2つの方法でそれぞれ Cookie を設定した際に片方の方法で追加したものが上書きされてしまう問題の修正"
   },
@@ -52,6 +58,7 @@
     "name": "Run action handlers for routes with middleware even if no loader is present #14443",
     "date": "2025-10-24",
     "link": "https://github.com/remix-run/react-router/pull/14443",
+    "projectLink": "https://github.com/remix-run/react-router",
     "skills": [ "JavaScript", "TypeScript", "Node.js", "React" ],
     "description": "特定の環境(middleware が設定されているが `loader()` 関数が設定されていないページ)で `action()` 関数が正しく実行されない問題の修正"
   },
@@ -60,6 +67,7 @@
     "name": "Add fallback when the redirect response has no Location header #5050",
     "date": "2025-09-18",
     "link": "https://github.com/ktorio/ktor/pull/5050",
+    "projectLink": "https://github.com/ktorio/ktor",
     "skills": [ "Ktor" ],
     "description": "リダイレクトレスポンスに Location ヘッダが含まれていなかった時の挙動の修正"
   },
@@ -68,6 +76,7 @@
     "name": "Handle explicit \"multipart/form-data\" encType in Form Component #12948",
     "date": "2025-07-13",
     "link": "https://github.com/react-hook-form/react-hook-form/pull/12948",
+    "projectLink": "https://github.com/react-hook-form/react-hook-form",
     "skills": [ "JavaScript", "TypeScript", "Node.js", "React" ],
     "description": "React Hook Form の <Form> コンポーネントにおいて、明示的に `encType=\"multipart/form-data\"` と設定された時に起きる問題の修正"
   },
@@ -76,6 +85,7 @@
     "name": "Remove Content-Length header from Single Fetch responses #13902",
     "date": "2025-07-01",
     "link": "https://github.com/remix-run/react-router/pull/13902",
+    "projectLink": "https://github.com/remix-run/react-router",
     "skills": [ "JavaScript", "TypeScript", "Node.js", "React" ],
     "description": "主に認証ライブラリ等で作成されるリダイレクトレスポンスに含まれる Content-Length ヘッダと React Router の Single Fetch 機能の相性問題によって起きる問題の修正"
   },
@@ -84,6 +94,7 @@
     "name": "Support invalid Date in turbo-stream v2 fork #13684",
     "date": "2025-06-26",
     "link": "https://github.com/remix-run/react-router/pull/13684",
+    "projectLink": "https://github.com/remix-run/react-router",
     "skills": [ "JavaScript", "TypeScript", "Node.js" ],
     "description": "React Router の内部で使われている turbo-stream のフォークコードで、invalid Date を扱うことが出来なかった問題の修正"
   },
@@ -92,6 +103,7 @@
     "name": "Support unencoded UTF-8 routes in prerender config with ssr set to false #13699",
     "date": "2025-06-28",
     "link": "https://github.com/remix-run/react-router/pull/13699",
+    "projectLink": "https://github.com/remix-run/react-router",
     "skills": [ "JavaScript", "TypeScript", "Node.js" ],
     "description": "`ssr: false` の時、非 ASCII 文字が含まれるルートページの prerender に失敗する問題の修正"
   },
@@ -100,6 +112,7 @@
     "name": "Add remove and removeAll methods to CacheStorage #4896",
     "date": "2025-06-04",
     "link": "https://github.com/ktorio/ktor/pull/4896",
+    "projectLink": "https://github.com/ktorio/ktor",
     "skills": [ "Ktor" ],
     "description": "Ktor の CacheStorage に削除機能を追加してほしいという要望を受けて実装"
   },
@@ -108,6 +121,7 @@
     "name": "Store client header cookies with RAW encoding to prevent value alteration #4873",
     "date": "2025-05-27",
     "link": "https://github.com/ktorio/ktor/pull/4873",
+    "projectLink": "https://github.com/ktorio/ktor",
     "skills": [ "Ktor" ],
     "description": "Ktor でレスポンスを受け取った際、Cookie の値が自動でエンコードされて保存されてしまう問題の修正"
   }
