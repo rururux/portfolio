@@ -1,5 +1,68 @@
 [
   {
+    "project": "Astro",
+    "name": "chore: skip installing Chromium in e2e test setup #15641",
+    "date": "2026-02-28",
+    "link": "https://github.com/withastro/astro/pull/15641",
+    "projectLink": "https://github.com/withastro/astro",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "playwright を使ったテストを実行する前に、既にインストール済みである chromium ブラウザを再度インストールするよう書かれていた箇所を削除し、テストを行う前のセットアップ処理の時間を短縮"
+  },
+  {
+    "project": "Astro",
+    "name": "fix: add changeset to bump @astrojs/markdown-remark and fix missing `./shiki` export #15676",
+    "date": "2026-02-27",
+    "link": "https://github.com/withastro/astro/pull/15676",
+    "projectLink": "https://github.com/withastro/astro",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "@astrojs/markdown-remark のコードが更新された際に changeset が抜けていた為、他の astro パッケージでエラーが発生した問題の修正"
+  },
+  {
+    "project": "Astro",
+    "name": "fix: Fix integration test failure for `<Code />` component on Cloudflare Workers #15648",
+    "date": "2026-02-25",
+    "link": "https://github.com/withastro/astro/pull/15648",
+    "projectLink": "https://github.com/withastro/astro",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "あるプルリクエストの revert 処理時に誤って別の問題の修正前のコードまで戻されてしまい、以前修正された問題が再度発生した為、再度修正を適用"
+  },
+  {
+    "project": "Astro",
+    "name": "fix: update Cloudflare adapter's default image service #15435",
+    "date": "2026-02-24",
+    "link": "https://github.com/withastro/astro/pull/15435",
+    "projectLink": "https://github.com/withastro/astro",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "Cloudflare Workers 用インテグレーションと `<Image />` コンポーネントを同時に使用した際にエラーが発生する問題の修正 (Astro のメンテナにこのプルリクエストを彼らへ引き継がせることを頼まれ承諾)"
+  },
+  {
+    "project": "Astro",
+    "name": "fix(preact): avoid triggering React 19 hook error logs #15619",
+    "date": "2026-02-24",
+    "link": "https://github.com/withastro/astro/pull/15619",
+    "projectLink": "https://github.com/withastro/astro",
+    "skills": [ "JavaScript", "TypeScript", "React" ],
+    "description": "preact 用インテグレーションと React 19 用インテグレーションを同時に使用した際に警告ログが表示されてしまう問題の修正"
+  },
+  {
+    "project": "Astro",
+    "name": "fix(cloudflare): strip `return` statements from frontmatter in esbuild scan plugin #15588",
+    "date": "2026-02-20",
+    "link": "https://github.com/withastro/astro/pull/15588",
+    "projectLink": "https://github.com/withastro/astro",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "Cloudflare Workers 用インテグレーションを使用時に、Astro コンポーネント内のコードで top-level return が使用されていた際に起きるエラーに対処"
+  },
+  {
+    "project": "Astro",
+    "name": "fix(runtime): preserve `hidden=\"until-found\"` value in attribues #15542",
+    "date": "2026-02-17",
+    "link": "https://github.com/withastro/astro/pull/15542",
+    "projectLink": "https://github.com/withastro/astro",
+    "skills": [ "JavaScript", "TypeScript" ],
+    "description": "HTML の `hidden` 属性に新しく追加された `until-found` という値に Astro が適切に対応していなかった問題の修正"
+  },
+  {
     "project": "eslint/csstree",
     "name": "fix: add support for alpha() color function #107",
     "date": "2026-02-07",
