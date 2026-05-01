@@ -2,6 +2,7 @@
 import Image from "astro/components/Image.astro"
 import Skills from "./Skills.astro"
 import Skill from "./Skill.astro"
+import Link from "./Link.astro";
 
 const skills = [
   "HTML / CSS", "JavaScript", "TypeScript", "React", "Svelte", "Node.js",
@@ -22,7 +23,8 @@ const skills = [
     {skills.map(skill => <Skill>{skill}</Skill>)}
   </Skills>
   <main>
-    <span>プログラミングと、音楽と、デザインと、モノが好き。</span>
+    <p>プログラミングと、音楽と、デザインと、モノが好き。</p>
+    <p>2026年4月から Astro の <Link href="https://github.com/withastro/.github/blob/main/GOVERNANCE.md#level-2-l2---maintainer">L2 Maintainer</Link> になりました。</p>
     <slot />
   </main>
 </article>
